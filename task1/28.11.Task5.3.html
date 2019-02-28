@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Task 5.3</title>
+    <meta charset="utf-8">
+   <body>
+      <style>
+        p {
+          color: brown;
+        }
+      </style>
+
+      <p>Необходимо создать из одномерного массива n*n двумерный массив n*n. </p>   
+      <p> Возьмём массив из чисел: 1,20,3,40,5,16,70,8,9 </p>
+
+      <input id = "TwoDimArr" type = "button" value = "Show me Two Dimentional Array " onclick="getTwoDimArr(testArr)">
+
+      <script>
+          let testArr = [1,20,3,40,5,16,70,8,9];
+
+          function getTwoDimArr (arr) {
+            console.log(arr);
+
+            let twoDimArr = [];  
+            let n = Math.sqrt(arr.length);
+
+            for (let i = 0; i < n; i++) { 
+              let row = [];
+                for (let j = 0; j < n; j++) {
+                  let indexINeed = n * i + j;
+
+                  row.push(arr[indexINeed]);
+                }
+              twoDimArr.push(row);
+            }
+
+            let showMyArr = twoDimArr.join('\n');
+            alert (showMyArr);
+          }
+      </script>
+   </body>
+</html>

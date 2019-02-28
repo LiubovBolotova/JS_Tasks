@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>blackjack</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="blackjack.css" />
+	</head>
+
+	<body>
+		<section class="field">
+			<div class="bankerResult"></div>
+
+			<div class="bankerCards"></div>
+
+			<div class="allGameResult"></div>
+
+			<div class="buttons">
+				<button type="button" class="start" onclick="startGame()">Начать игру</button>
+
+				<div class="action-buttons">
+					<button id="gamer" type="button" onclick="giveCards()">Взять</button>
+
+					<button id="stopTaking" type="button" onclick="stopTakingCards()">Стоп</button>
+				</div>
+			</div>
+
+			<div class="gamerCards"></div>
+
+			<div class="gamerResult"></div>
+		</section>
+
+		<script src="blackjack.js"></script>
+	</body>
+</html>

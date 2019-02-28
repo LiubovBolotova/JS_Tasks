@@ -1,0 +1,112 @@
+<!DOCTYPE html></body>
+<html>
+ <head>
+  <title>canvas</title>
+  <meta charset="utf-8">
+
+  <style>
+  h1{
+    margin-left: 100px;
+  }
+  img{
+    width: 200px;
+    height: 200px;
+  }
+  p{
+    font-size: 20px;
+    margin-left: 100px;
+  }
+  #snail{
+    color:darkgreen;
+    font-weight: bold;
+  }
+  </style>
+ </head>
+
+ <body>
+
+     <h1 id="want">Хочешь сгенерить улиточку?</h1>
+     
+     <p id="snail"><img src="snail-bob-2.png"></p>
+
+     <p id="trueSnail"></p>
+
+     <label> Введи число и нажми на кнопку
+     <input id="disiredLength" type="text">
+    </label>
+
+     <button type = "button" onclick="calculateSnail()">Вызвать улитку</button>
+     
+ <script>
+ let twoDemArray = [];
+let snailArray = [];
+
+function generateArray(n) {
+	for (let y = 0; y < n; y++) {
+		let row = [];
+		for (let x = 1; x <= n; x++) {
+			let index = n * y + x;
+			row.push(index);
+		}
+		twoDemArray.push(row);
+	}
+	return twoDemArray;
+}
+
+var twoDimentionalArray;
+let progressMove = 0;
+let regressMove;
+let arrlength;
+
+function getSnailArray() {
+	snailArray = [];
+	do {
+		for (progressMove = 0; progressMove < arrlength; progressMove++) {
+			snailArray.push(twoDimentionalArray[0][progressMove]);
+		}
+
+		twoDimentionalArray.splice(0, 1);
+
+		progressMove = arrlength - progressMove;
+
+		arrlength--;
+
+		for (progressMove; progressMove < arrlength; progressMove++) {
+			snailArray.push(twoDimentionalArray[progressMove][arrlength]);
+			twoDimentionalArray[progressMove].splice(arrlength);
+		}
+
+		for (regressMove = arrlength - 1; regressMove >= 0; regressMove--) {
+			snailArray.push(twoDimentionalArray[arrlength - 1][regressMove]);
+		}
+
+		twoDimentionalArray.splice(arrlength - 1);
+
+		arrlength--;
+
+		for (regressMove = arrlength - 1; regressMove >= 0; regressMove--) {
+			snailArray.push(twoDimentionalArray[regressMove][0]);
+			twoDimentionalArray[regressMove].splice(0, 1);
+		}
+	} while (arrlength > 0);
+
+	return snailArray;
+}
+
+function calculateSnail() {
+let mydisiredLength = +document.getElementById('disiredLength').value;
+
+  twoDimentionalArray = generateArray(mydisiredLength);
+  
+  arrlength = twoDimentionalArray.length;
+  
+  document.getElementById('snail').innerHTML = getSnailArray();
+  
+  let want=(document.getElementById('want').innerHTML='Ещё одну? эй ты, французик!');
+  
+	let trueSnail = (document.getElementById('trueSnail').innerHTML='↟' + '<br/>' + 'Вот она, твоя красотка');
+}
+
+	    </script>
+	</body>
+</html>

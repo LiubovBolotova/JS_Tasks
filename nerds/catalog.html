@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link href="http://fonts.googleapis.com/css?family=Roboto&subset=latin,cyrillic" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="css/normalize.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/catalog.css" />
+  <script src="js/components.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/catalog.js" defer></script>
+  <title>Nerds shop</title>
+</head>
+
+<body>
+  <header></header>
+
+  <h1 class="first-section">
+    Магазин готовых шаблонов
+  </h1>
+
+  <main>
+    <section class="filter-form">
+      <form action="https://echo.htmlacademy.ru" 
+            method="get">
+        <fieldset class="price-menu">
+          <legend>
+            Стоимость:
+          </legend>
+
+          <div class="range-controls">
+            <div class="toggle toggle-min"></div>
+
+            <div class="scale">
+              <div class="green-line"></div>
+            </div>
+
+            <div class="toggle toggle-max"></div>
+          </div>
+
+          <div class="price-controls">
+            <label class="min-price">
+              от
+
+              <input name="min-price" 
+                     type="text" 
+                     id="minInput" 
+                     onchange="onchangeMinInput(this.value)" 
+                     value="0" />
+            </label>
+
+            <label class="max-price">
+              до
+
+              <input name="max-price" 
+                     type="text" 
+                     id="maxInput" 
+                     onchange="onchangeMaxInput(this.value)" 
+                     value="15000" />
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset class="grid-menu">
+          <legend>
+            Сетка:
+          </legend>
+
+          <div>
+            <input type="radio" 
+                   name="grid-type" 
+                   id="adaptive" 
+                   checked />
+
+            <label for="adaptive">
+              Адаптивная
+            </label>
+          </div>
+
+          <div>
+            <input type="radio" 
+                   name="grid-type" 
+                   value="fixed-grid" 
+                   id="fixed" />
+
+            <label for="fixed">
+              Фиксированная
+            </label>
+          </div>
+
+          <div>
+            <input type="radio" 
+                   name="grid-type" 
+                   value="fluid-grid" 
+                   id="fluid" />
+
+            <label for="fluid">
+              Резиновая
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset class="features-menu">
+          <legend>
+            Особенности:
+          </legend>
+
+          <div>
+            <input type="checkbox" 
+                   name="slider" 
+                   id="slider-block" 
+                   checked />
+
+            <label for="slider-block">
+              Слайдер
+            </label>
+          </div>
+
+          <div>
+            <input type="checkbox" 
+                   name="advantages" 
+                   id="advantages-block" />
+
+            <label for="advantages-block">
+              Блок преимуществ
+            </label>
+          </div>
+
+          <div>
+            <input type="checkbox" 
+                   name="news" 
+                   id="news-block" 
+                   checked />
+
+            <label for="news-block">
+              Новости
+            </label>
+          </div>
+
+          <div>
+            <input type="checkbox" 
+                   id="gallery-block" />
+
+            <label for="gallery-block">
+              Галерея
+            </label>
+          </div>
+
+          <div>
+            <input type="checkbox" 
+                   name="cart" 
+                   id="cart-block" />
+
+            <label for="cart-block">
+              Корзина
+            </label>
+          </div>
+        </fieldset>
+
+        <input class="show-items-button" 
+               type="submit" 
+               value="Показать" />
+      </form>
+    </section>
+
+    <section class="templates-sorting">
+      <nav class="sorting-nav">
+        <h3>
+          Сортировать:
+        </h3>
+
+        <ul class="sorting-by">
+          <li>
+            <a href="#">
+              <p>
+                По цене
+              </p>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <p>
+                По типу
+              </p>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <p>
+                По названию
+              </p>
+            </a>
+          </li>
+
+          <li class="arrows">
+            <a href="#">
+              <div class="arrow-asc">
+                <p>▼</p>
+              </div>
+            </a>
+
+            <a href="#">
+              <div class="arrow-desc">
+                <p>▲</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <ul class="templates">
+        <li>
+          <div class="template">
+            <ul class="template-head">
+              <li></li>
+
+              <li></li>
+
+              <li></li>
+            </ul>
+
+            <div class="template-body">
+              <img title="sedona" 
+                   src="img/img-sedona.jpg.png" />
+            </div>
+
+            <div class="template-modal">
+              <h3>
+                Sedona
+              </h3>
+
+              <p>
+                Информационный сайт для туристов
+              </p>
+
+              <button class="template-button" 
+                      type="button">
+                9 900 РУБ.
+              </button>
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <div class="template">
+            <ul class="template-head">
+              <li></li>
+
+              <li></li>
+
+              <li></li>
+            </ul>
+
+            <div class="template-body">
+              <img title="pink" 
+                   src="img/img-pink.jpg.png" />
+            </div>
+
+            <div class="template-modal">
+              <h3>
+                Pink App
+              </h3>
+
+              <p>
+                Продуктовый лендинг приложения для iOS и Android
+              </p>
+
+              <button class="template-button" 
+                      type="button">
+                9 900 руб.
+              </button>
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <div class="template">
+            <ul class="template-head">
+              <li></li>
+
+              <li></li>
+
+              <li></li>
+            </ul>
+
+            <div class="template-body">
+              <img title="barbershop" 
+                   src="img/img-barbershop.jpg.png" />
+            </div>
+
+            <div class="template-modal">
+              <h3>
+                Barbershop
+              </h3>
+
+              <p>
+                Сайт салоны красоты. Для мужчин, да.
+              </p>
+
+              <button class="template-button" 
+                      type="button">
+                9 900 руб.
+              </button>
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <div class="template">
+            <ul class="template-head">
+              <li></li>
+
+              <li></li>
+
+              <li></li>
+            </ul>
+
+            <div class="template-body">
+              <img title="mishka" 
+                   src="img/img-mishka.jpg.png" />
+            </div>
+
+            <div class="template-modal">
+              <h3>
+                MISHKA
+              </h3>
+
+              <p>
+                Интернет-магазин вязаных игрушек
+              </p>
+
+              <button class="template-button" 
+                      type="button">
+                9 900 руб.
+              </button>
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <div class="template">
+            <ul class="template-head">
+              <li></li>
+
+              <li></li>
+
+              <li></li>
+            </ul>
+
+            <div class="template-body">
+              <img title="aplus" 
+                   src="img/img-aplus.jpg.png" />
+            </div>
+
+            <div class="template-modal">
+              <h3>
+                A Plus
+              </h3>
+
+              <p>
+                Лендинг курсов повышения квалификации для туристов
+              </p>
+
+              <button class="template-button" 
+                      type="button">
+                9 900 руб.
+              </button>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="template">
+            <ul class="template-head">
+              <li></li>
+
+              <li></li>
+
+              <li></li>
+            </ul>
+
+            <div class="template-body">
+              <img title="kvast" 
+                   src="img/img-kvast.jpg.png" />
+            </div>
+
+            <div class="template-modal">
+              <h3 class="uppercase">
+                кваст
+              </h3>
+
+              <p>
+                Промо-сайт производителя крафтового кваса
+              </p>
+
+              <button class="template-button" 
+                      type="button">
+                9 900 руб.
+              </button>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <section onmouseover="deleteMarker()">
+    <div class="google-map">
+      <img src="./img/map-marker.png" 
+           id="marker" 
+           class="map-marker" />
+
+      <div class="map-info">
+        <p class="first-map-info uppercase">
+          nerds design studio
+        </p>
+
+        <p class="second-map-info-text">
+          191186, Санкт-Петербург,<br />
+          ул. Б. Конюшенная, д. 19/8 <br />
+          тел. +7 (812) 275-75-75
+        </p>
+        <button class="template-button button-map-info" 
+                type="button">
+          <p class="uppercase">
+            напишите нам
+          </p>
+        </button>
+      </div>
+
+      <iframe width="100%" 
+              height="416" 
+              src="https://maps.google.com/maps?width=555&amp;height=416&amp;hl=ru&amp;q=%D1%81%D0%B0%D0%BD%D0%BA%D1%82%20%D0%BF%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3%20%D0%BA%D0%BE%D0%BD%D1%8E%D1%88%D0%B5%D0%BD%D0%B0%D1%8F%2019%2F8+(Nerds)&amp;ie=UTF8&amp;t=&amp;z=16&amp;iwloc=B&amp;output=embed"
+              frameborder="0" 
+              scrolling="no"
+              marginheight="0"
+              marginwidth="0">
+      </iframe>
+    </div>  
+  </section>
+
+  <section class="write-us-wrapper">
+    <div class="write-us-container visually-hidden">
+      <img class="close-cross" 
+           src="img/close-cross.svg">
+
+      <p>
+        Напишите нам
+      </p>
+
+      <form>
+        <div class="wright-us-user-data">
+          <div class="user-name">
+            <label for="username">
+              Ваше имя
+            </label>
+
+            <input type="text" 
+                   id="username" 
+                   placeholder="Представьтесь, пожалуйста">
+          </div>
+
+          <div class="user-mail">
+            <label for="usermail">
+              Ваш e-mail
+            </label>
+
+            <input type="text" 
+                   id="usermail" 
+                   placeholder="Для отправки ответа">
+          </div>
+        </div>
+
+        <div class="wright-us-mail-text">
+          <label for="mailtext">
+            Текст письма
+          </label>
+
+          <textarea id="mailtext" 
+                    placeholder="В свободной форме">
+            </textarea>
+        </div>
+
+        <input class="send-mail-button" 
+               type="button" 
+               value="ОТПРАВИТЬ">
+      </form>
+    </div>
+  </section>
+
+  <footer></footer>
+</body>
+
+</html>

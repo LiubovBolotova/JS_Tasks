@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Task 1.5</title>
+    <meta charset="utf-8">
+	<body>
+		<p>
+			В этой задаче мы хотим определить есть ли в массиве хотя бы одно отрицательное число.Если "Да" - вывести
+			"true".
+		</p>
+		<input id="isNegative" type="button" value="Ответ" onclick="typeArray ()">
+ 
+		<style>
+			body {
+				background-color: darksalmon;
+			}
+			#isNegative {
+				color: chocolate;
+				font-size: 40px;
+				border-color: indigo;
+			}
+			p {
+				color: indigo;
+				font-size: 30;
+				width: 500px;
+		</style>
+
+
+		<script>
+    debugger;
+			function typeArray() {
+				let yourArray = prompt('Введите свой массив', 0);
+        
+        let newArr = yourArray.split(',');
+          for (let i = 0; i < newArr.length; i++) {
+				    if (isNaN(newArr[i])) {
+					    alert('Вы ввели не числовое значение, попробуйте ещё раз!');
+              return;
+				      } 
+          }
+				newArr.sort(function(a, b) {
+					return a - b;
+				});
+				function isNegative(number) {
+					return number < 0;
+				}
+				alert(newArr.some(isNegative));
+			}
+		</script>
+	</body>
+</html>

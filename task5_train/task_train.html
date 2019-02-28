@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Task train</title>
+		<meta charset="utf-8" />
+		<style>
+			body {
+			}
+			.train {
+				width: 27%;
+				margin: auto;
+				padding: 15px;
+				border: 1px solid lightgrey;
+				flex-direction: column;
+				background-color: lightgrey;
+			}
+			p {
+				/* text-align: center; */
+				color: navy;
+				font-size: 20px;
+				width: 500px;
+			}
+
+			#countCarriages {
+				color: blue;
+				font-size: 20px;
+				width: 300px;
+				height: 50px;
+				border-radius: 5px;
+				background-color: peachpuff;
+			}
+			img {
+				width: 200px;
+				height: 200px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<script src="task_train.js"></script>
+
+		<div class="train">
+			<p>Допустим, есть поезд, у которого первый и последний вагон сцеплены.. и он круговой</p>
+
+			<img id="train" src="train.jpg" />
+
+			<p>
+				Вася купил билет на такой поезд и оказался в своём вагоне. <br />
+				<img src="вася.jpg" /> <br />И тут он захотел пересчитать все вагоны поезда и пометил свой вагон,
+				включив там свет.
+			</p>
+			<p>
+				Чтобы посчитать длину поезда, он решил ВЫКЛЮЧАТЬ свет во всех вагонах, где горит свет до тех пор пока в
+				его родном вагоне тоже не погаснет свет. Но Вася умный, Вася шёл и считал вагоны.<br />
+				Сколько же вагонов насчитал кот?
+			</p>
+			<button id="countCarriages" type="button" onclick="countCarriagesinTrain()">
+				Show Amount of Carriages
+			</button>
+		</div>
+	</body>
+</html>

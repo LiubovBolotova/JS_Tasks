@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			.isLampOn {
+				margin: auto;
+				padding: 10px;
+				display: flex;
+				justify-content: center;
+				background-color: black;
+				flex-direction: column;
+				width: 350px;
+			}
+			p {
+				color: #f3c52d;
+				font-size: 30px;
+				text-align: center;
+			}
+
+			#lamp_button {
+				background-color: black;
+				color: #f3c52d;
+				font-size: 30px;
+				border-color: chocolate;
+				width: 350px;
+			}
+		</style>
+	</head>
+	<title>Task 5.3</title>
+	<meta charset="utf-8" />
+	<body>
+		<div class="isLampOn">
+			<p>
+				Our task in this assignment is to determine whether the bulb element of a wired system will be on or
+				off.
+			</p>
+			<p>If "1" - light is On; <br />"0" - light is Off.</p>
+			<img id="bulb" src="bulb.jpg" />
+			<button id="lamp_button" type="button" onclick="lightOn()">Show me if Light is On?</button>
+		</div>
+		<script src="bulb.js"></script>
+	</body>
+</html>

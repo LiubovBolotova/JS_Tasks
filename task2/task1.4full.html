@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Task 1.4</title>
+    <meta charset="utf-8">
+	<body>
+		<style>
+			p {
+				color: rgba(111, 0, 255, 0.308);
+				font-size: 100px;
+			}
+
+			#showDiff {
+				color: blue;
+				font-size: 40px;
+			}
+		</style>
+		<style>
+			p {
+				color: rgba(111, 0, 255, 0.308);
+				font-size: 100px;
+			}
+
+			#showDiff {
+				color: blue;
+				font-size: 40px;
+			}
+		</style>
+
+		<p>Your difference is here:</p>
+
+		<input id="showDiff" type="button" value="Show difference" onclick="showDiff ()" />
+
+		<script>
+			let arr = [1, 5, -60, 7, -25, 17, 43, 115, -10];
+
+			let min = Math.min.apply(null, arr);
+			let max = Math.max.apply(null, arr);
+
+			diff = Math.abs(arr.indexOf(min) - arr.indexOf(max)) - 1;
+
+			newDiff = (diff - 1) % 2 === 0 ? true : false;
+
+			function showDiff() {
+				alert(diff);
+			}
+		</script>
+	</body>
+</html>
